@@ -4,7 +4,9 @@ import org.junit.Test;
 
 import static github.hxfirefox.kata.texaspoker.poker.Poker.*;
 import static github.hxfirefox.kata.texaspoker.poker.Suit.*;
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 public class PokerTest {
     @Test
@@ -15,5 +17,15 @@ public class PokerTest {
 
         // then
         assertEquals(card(C, 3), card(D, 3));
+    }
+
+    @Test
+    public void should_compare_with_2_pokers() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertThat(card(D, 13).compareTo(card(H, 5)), is(1));
     }
 }

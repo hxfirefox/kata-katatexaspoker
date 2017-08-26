@@ -1,6 +1,6 @@
 package github.hxfirefox.kata.texaspoker.poker;
 
-public class Poker {
+public class Poker implements Comparable{
     private final Suit suit;
     private final int value;
 
@@ -26,5 +26,11 @@ public class Poker {
     @Override
     public int hashCode() {
         return value;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Poker other = (Poker) o;
+        return Integer.compare(this.value, other.value);
     }
 }
