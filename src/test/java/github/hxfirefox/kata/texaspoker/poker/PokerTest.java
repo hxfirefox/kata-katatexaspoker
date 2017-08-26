@@ -27,5 +27,7 @@ public class PokerTest {
 
         // then
         assertThat(card(D, 13).compareTo(card(H, 5)), is(1));
+        assertThat(card(D, 5).compareTo(card(H, 13)), is(-1));
+        assertThat(card(D, 5).compareTo(card(H, 5)), is(0));
     }
 }
