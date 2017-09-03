@@ -52,4 +52,12 @@ public class Poker implements Comparable {
 
         return builder.append(suit.toString()).toString();
     }
+
+    public Suit getSuit() {
+        return suit;
+    }
+
+    public int getValue() {
+        return value;
+    }
 }
