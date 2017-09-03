@@ -16,7 +16,7 @@ public class PokerTest {
         // when
 
         // then
-        assertEquals(card(C, 3), card(D, 3));
+        assertEquals(card(3, C), card(3, D));
     }
 
     @Test
@@ -26,9 +26,9 @@ public class PokerTest {
         // when
 
         // then
-        assertThat(card(D, 13).compareTo(card(H, 5)), is(1));
-        assertThat(card(D, 5).compareTo(card(H, 13)), is(-1));
-        assertThat(card(D, 5).compareTo(card(H, 5)), is(0));
+        assertThat(card(13, D).compareTo(card(5, H)), is(1));
+        assertThat(card(5, D).compareTo(card(13, H)), is(-1));
+        assertThat(card(5, D).compareTo(card(5, H)), is(0));
     }
 
     @Test
@@ -38,6 +38,6 @@ public class PokerTest {
         // when
 
         // then
-        assertThat(card(H,14).toString(), is("AH"));
+        assertThat(card(14, H).toString(), is("AH"));
     }
 }

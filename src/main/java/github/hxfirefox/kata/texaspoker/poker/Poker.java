@@ -9,7 +9,7 @@ public class Poker implements Comparable {
         this.value = value;
     }
 
-    public static Poker card(Suit suit, int value) {
+    public static Poker card(int value, Suit suit) {
         return new Poker(suit, value);
     }
 
