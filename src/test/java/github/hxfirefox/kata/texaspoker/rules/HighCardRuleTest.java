@@ -3,6 +3,7 @@ package github.hxfirefox.kata.texaspoker.rules;
 import github.hxfirefox.kata.texaspoker.poker.Hand;
 import github.hxfirefox.kata.texaspoker.poker.Poker;
 import github.hxfirefox.kata.texaspoker.poker.Suit;
+import org.junit.Before;
 import org.junit.Test;
 
 import static github.hxfirefox.kata.texaspoker.poker.Poker.*;
@@ -12,6 +13,11 @@ import static org.junit.Assert.assertThat;
 
 public class HighCardRuleTest {
     private HighCardRule rule;
+
+    @Before
+    public void setUp() throws Exception {
+        rule = new HighCardRule();
+    }
 
     @Test
     public void should_win_who_holding_highest_value() throws Exception {
