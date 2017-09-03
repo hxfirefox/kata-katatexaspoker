@@ -29,4 +29,15 @@ public class HighCardRuleTest {
         // then
         assertThat(result, is(-1));
     }
+
+    @Test
+    public void should_win_with_next_highest_when_highest_same() throws Exception {
+        // given
+        Hand black = new Hand(card(2, H), card(3, D), card(5, S), card(9, C), card(13, D));
+        Hand white = new Hand(card(2, C), card(3, H), card(4, S), card(8, C), card(13, H));
+        // when
+        int result = rule.with(black, white);
+        // then
+        assertThat(result, is(1));
+    }
 }
