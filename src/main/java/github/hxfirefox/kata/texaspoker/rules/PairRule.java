@@ -9,9 +9,7 @@ import java.util.HashSet;
 public final class PairRule implements Ruleable {
     @Override
     public int with(Hand black, Hand white) {
-        int blackPair = pair(black);
-        int whitePair = pair(white);
-        return Integer.compare(blackPair,whitePair);
+        return Integer.compare(pair(black), pair(white));
     }
 
     private int pair(Hand hand) {

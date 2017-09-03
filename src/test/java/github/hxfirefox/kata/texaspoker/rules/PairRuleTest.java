@@ -27,4 +27,15 @@ public class PairRuleTest {
         // then
         assertThat(result, is(-1));
     }
+
+    @Test
+    public void should_tie_with_pair_value_same() throws Exception {
+        // given
+        Hand black = new Hand(card(2, S), card(2, D), card(5, S), card(9, C), card(13, D));
+        Hand white = new Hand(card(2, C), card(2, H), card(4, S), card(8, C), card(14, H));
+        // when
+        int result = rule.with(black, white);
+        // then
+        assertThat(result, is(0));
+    }
 }
