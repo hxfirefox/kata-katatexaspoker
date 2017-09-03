@@ -8,7 +8,8 @@ import java.util.List;
 
 import static java.util.Collections.*;
 
-public final class HighCardRule {
+public final class HighCardRule implements Ruleable{
+    @Override
     public int with(Hand black, Hand white) {
         List<Poker> blackOrder = order(black);
         List<Poker> whiteOrder = order(white);

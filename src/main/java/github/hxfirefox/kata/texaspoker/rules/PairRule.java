@@ -6,7 +6,8 @@ import github.hxfirefox.kata.texaspoker.poker.Poker;
 
 import java.util.HashSet;
 
-public final class PairRule {
+public final class PairRule implements Ruleable {
+    @Override
     public int with(Hand black, Hand white) {
         int blackPair = pair(black);
         int whitePair = pair(white);
