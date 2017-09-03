@@ -30,4 +30,14 @@ public class PokerTest {
         assertThat(card(D, 5).compareTo(card(H, 13)), is(-1));
         assertThat(card(D, 5).compareTo(card(H, 5)), is(0));
     }
+
+    @Test
+    public void should_print_AH_when_poker_value_14_with_suit_H() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertThat(card(H,14).toString(), is("AH"));
+    }
 }

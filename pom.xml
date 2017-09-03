@@ -12,6 +12,7 @@
     <properties>
         <java.version>1.8</java.version>
         <junit.version>4.11</junit.version>
+        <maven-compiler-plugin.version>3.6.2</maven-compiler-plugin.version>
     </properties>
 
     <dependencies>
@@ -28,12 +29,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.2</version>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-                    <test-source>${java.version}</test-source>
-                    <test-target>${java.version}</test-target>
+                    <testSource>${java.version}</testSource>
+                    <testTarget>${java.version}</testTarget>
                     <encoding>utf-8</encoding>
                 </configuration>
             </plugin>

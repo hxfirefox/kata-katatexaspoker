@@ -49,7 +49,7 @@ public class Poker implements Comparable {
         } else {
             builder.append(value);
         }
-        
+
         return builder.append(suit.toString()).toString();
     }
 }
